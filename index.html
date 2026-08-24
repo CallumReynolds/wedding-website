@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4efe7" />
+    <meta
+      name="description"
+      content="A wedding invitation and celebration guide for our guests."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Our Wedding" />
+    <meta
+      property="og:description"
+      content="Save the date and celebrate with us."
+    />
+    <title>Our Wedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="wedding-config.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="hero" id="home">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav__mark" href="#home" aria-label="Back to top">W</a>
+        <div class="nav__links">
+          <a href="#details">Details</a>
+          <a href="#story">Our story</a>
+          <a href="#rsvp">RSVP</a>
+        </div>
+      </nav>
+
+      <div class="hero__ornament" aria-hidden="true">✦</div>
+      <p class="eyebrow">Together with their families</p>
+      <h1><span data-config="partnerOne">Partner One</span> <em>&amp;</em> <span data-config="partnerTwo">Partner Two</span></h1>
+      <p class="hero__invitation">invite you to celebrate their wedding</p>
+      <div class="date-lockup" aria-label="Wedding date">
+        <span data-config="dateDay">Saturday</span>
+        <strong data-config="dateNumber">20</strong>
+        <span data-config="dateMonthYear">Month 2027</span>
+      </div>
+      <a class="button button--light" href="#details">Discover the day</a>
+      <div class="hero__scroll" aria-hidden="true"><span></span></div>
+    </header>
+
+    <main>
+      <section class="section details" id="details">
+        <div class="section-heading reveal">
+          <p class="eyebrow">The celebration</p>
+          <h2>Wedding details</h2>
+          <p>We cannot wait to share a beautiful day with our favourite people.</p>
+        </div>
+
+        <div class="detail-grid">
+          <article class="detail-card reveal">
+            <span class="detail-card__number">01</span>
+            <h3>When</h3>
+            <p data-config="fullDate">Saturday, 20 Month 2027</p>
+            <p data-config="ceremonyTime">Ceremony begins at 3:00 pm</p>
+          </article>
+          <article class="detail-card reveal">
+            <span class="detail-card__number">02</span>
+            <h3>Where</h3>
+            <p data-config="venue">Venue Name</p>
+            <p data-config="location">City, State</p>
+            <a data-config-link="mapsUrl" href="#" target="_blank" rel="noreferrer">View map</a>
+          </article>
+          <article class="detail-card reveal">
+            <span class="detail-card__number">03</span>
+            <h3>Wear</h3>
+            <p data-config="dressCode">Cocktail attire</p>
+            <p>Dress to celebrate, dance and feel wonderful.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <div class="story__photo reveal" role="img" aria-label="A place for the couple's favourite photograph">
+          <div>
+            <span>Our favourite photo</span>
+            <small>Replace this panel when you are ready</small>
+          </div>
+        </div>
+        <div class="story__copy reveal">
+          <p class="eyebrow">How it began</p>
+          <h2>Our story</h2>
+          <p data-config="story">
+            Our story is still being written. Add a few words here about how you
+            met, the adventures you have shared and the moment you knew.
+          </p>
+          <blockquote>“The best is yet to be.”</blockquote>
+        </div>
+      </section>
+
+      <section class="section rsvp" id="rsvp">
+        <div class="rsvp__card reveal">
+          <p class="eyebrow">Will you join us?</p>
+          <h2>RSVP</h2>
+          <p data-config="rsvpMessage">
+            Invitations and RSVP details will be shared soon. Please save the date.
+          </p>
+          <button class="button" type="button" disabled>RSVP coming soon</button>
+          <small data-config="rsvpDeadline">Response date to be confirmed</small>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p><span data-config="partnerOne">Partner One</span> <em>&amp;</em> <span data-config="partnerTwo">Partner Two</span></p>
+      <span data-config="dateMonthYear">Month 2027</span>
+    </footer>
+  </body>
+</html>
