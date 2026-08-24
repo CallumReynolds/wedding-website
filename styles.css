@@ -154,6 +154,11 @@ blockquote { margin: 2.8rem 0 0; padding-left: 1.5rem; border-left: 1px solid va
 .rsvp__card { max-width: 46rem; margin: auto; padding: clamp(3rem, 8vw, 6rem); border: 1px solid var(--line); text-align: center; box-shadow: 0 24px 70px rgba(38,54,47,.07); }
 .rsvp__card > p:not(.eyebrow) { max-width: 31rem; margin: 0 auto 2rem; color: #627169; }
 .rsvp__card small { display: block; margin-top: 1.2rem; color: #75817b; }
+.rsvp__form[hidden], .rsvp__pending[hidden] { display: none; }
+.rsvp__form { margin: 2.5rem calc(clamp(3rem, 8vw, 6rem) * -0.55) 0; }
+.rsvp__form iframe { display: block; width: 100%; height: 48rem; border: 0; background: var(--cream); }
+.rsvp__fallback { margin: 1rem 0 0; color: #627169; font-size: .76rem; }
+.rsvp__fallback a { color: var(--clay); font-weight: 600; }
 
 footer { padding: 3.5rem 1.5rem; text-align: center; color: var(--cream); background: var(--forest); }
 footer p { margin: 0; font-size: 2.1rem; }
@@ -174,6 +179,8 @@ footer > span { font-size: .62rem; letter-spacing: .16em; text-transform: upperc
   .detail-card { min-height: auto; }
   .story__photo { min-height: 30rem; }
   .story__copy { padding-top: 3rem; }
+  .rsvp__form { margin-inline: -1.5rem; }
+  .rsvp__form iframe { height: 52rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

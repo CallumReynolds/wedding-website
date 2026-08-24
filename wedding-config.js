@@ -16,4 +16,6 @@ window.WEDDING_CONFIG = {
   rsvpMessage:
     "Invitations and RSVP details will be shared soon. Please save the date.",
   rsvpDeadline: "Response date to be confirmed",
+  // In Google Forms, choose Send → Link, then paste the public form URL here.
+  googleFormUrl: "",
 };

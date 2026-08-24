@@ -105,7 +105,20 @@
           <p data-config="rsvpMessage">
             Invitations and RSVP details will be shared soon. Please save the date.
           </p>
-          <button class="button" type="button" disabled>RSVP coming soon</button>
+          <div class="rsvp__pending" data-rsvp-pending>
+            <button class="button" type="button" disabled>RSVP coming soon</button>
+          </div>
+          <div class="rsvp__form" data-rsvp-form hidden>
+            <iframe
+              data-rsvp-iframe
+              title="Wedding RSVP form"
+              loading="lazy"
+            ></iframe>
+            <p class="rsvp__fallback">
+              Having trouble with the embedded form?
+              <a data-rsvp-link href="#" target="_blank" rel="noreferrer">Open the RSVP form</a>
+            </p>
+          </div>
           <small data-config="rsvpDeadline">Response date to be confirmed</small>
         </div>
       </section>

@@ -12,6 +12,21 @@ document.querySelectorAll("[data-config-link]").forEach((element) => {
 
 document.title = `${config.partnerOne ?? "Our"} & ${config.partnerTwo ?? "Wedding"} — Wedding`;
 
+const googleFormUrl = config.googleFormUrl?.trim();
+if (googleFormUrl) {
+  try {
+    const embedUrl = new URL(googleFormUrl);
+    embedUrl.searchParams.set("embedded", "true");
+
+    document.querySelector("[data-rsvp-iframe]").src = embedUrl.toString();
+    document.querySelector("[data-rsvp-link]").href = googleFormUrl;
+    document.querySelector("[data-rsvp-form]").hidden = false;
+    document.querySelector("[data-rsvp-pending]").hidden = true;
+  } catch {
+    console.warn("The configured Google Form URL is invalid.");
+  }
+}
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
