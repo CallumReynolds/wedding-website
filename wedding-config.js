@@ -1,14 +1,14 @@
 // Replace these placeholders when your wedding details are confirmed.
 window.WEDDING_CONFIG = {
-  partnerOne: "Partner One",
-  partnerTwo: "Partner Two",
+  partnerOne: "Taylor",
+  partnerTwo: "Callum",
   dateDay: "Saturday",
-  dateNumber: "20",
-  dateMonthYear: "Month 2027",
-  fullDate: "Saturday, 20 Month 2027",
+  dateNumber: "21",
+  dateMonthYear: "August 2027",
+  fullDate: "Saturday, 21 August 2027",
   ceremonyTime: "Ceremony begins at 3:00 pm",
   venue: "Venue Name",
-  location: "City, State",
+  location: "Warwick, QLD",
   mapsUrl: "https://maps.google.com",
   dressCode: "Cocktail attire",
   story:
@@ -17,5 +17,5 @@ window.WEDDING_CONFIG = {
     "Invitations and RSVP details will be shared soon. Please save the date.",
   rsvpDeadline: "Response date to be confirmed",
   // In Google Forms, choose Send → Link, then paste the public form URL here.
-  googleFormUrl: "",
+  googleFormUrl: "https://forms.gle/vrKdZywjqi8N3XYS6",
 };
