@@ -1,11 +1,15 @@
 :root {
-  --ink: #26362f;
-  --forest: #2e4a3c;
-  --sage: #83947f;
-  --cream: #f4efe7;
-  --paper: #fffdf9;
-  --clay: #b8785f;
-  --line: rgba(38, 54, 47, 0.18);
+  --ink: #111111;
+  --burgundy: #6e2135;
+  --plum: #5a2a5e;
+  --olive: #6a7147;
+  --dusty-pink: #d8a4b7;
+  --butter-yellow: #f2d86b;
+  --warm-cream: #f7f2e8;
+  --chocolate-brown: #5a3a2e;
+  --cherry-red: #c6283d;
+  --black-accent: #111111;
+  --line: rgba(90, 58, 46, 0.2);
 }
 
 * { box-sizing: border-box; }
