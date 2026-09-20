@@ -191,3 +191,125 @@ footer > span { font-size: .62rem; letter-spacing: .16em; text-transform: upperc
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+
+/* Invitation palette and floral direction */
+:root {
+  --ink: #66723b;
+  --burgundy: #d87d61;
+  --plum: #d36e57;
+  --olive: #89944f;
+  --dusty-pink: #e19677;
+  --butter-yellow: #c1bc52;
+  --warm-cream: #fff8d7;
+  --chocolate-brown: #66723b;
+  --cherry-red: #d36e57;
+  --black-accent: #66723b;
+  --line: rgba(137, 148, 79, 0.32);
+}
+
+body { color: var(--ink); background: var(--warm-cream); }
+
+.hero {
+  min-height: 100svh;
+  padding: 7rem clamp(1.25rem, 7vw, 7rem) 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--olive);
+  background:
+    radial-gradient(circle at 15% 12%, rgba(193, 188, 82, 0.2), transparent 12rem),
+    radial-gradient(circle at 86% 84%, rgba(225, 150, 119, 0.18), transparent 15rem),
+    var(--warm-cream);
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero::before,
+.hero::after {
+  content: "✿";
+  position: absolute;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  color: var(--coral, #d87d61);
+  font-family: Georgia, serif;
+  font-size: clamp(8rem, 18vw, 17rem);
+  line-height: 0.7;
+  opacity: 0.86;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::before { left: -2rem; top: -1rem; transform: rotate(-18deg); }
+.hero::after { right: -2rem; bottom: -1rem; color: var(--peach, #e19677); transform: rotate(18deg); }
+
+.hero__copy { width: min(100%, 58rem); justify-self: initial; position: relative; z-index: 2; }
+.hero__illustration { position: absolute; inset: 0; z-index: 1; width: auto; aspect-ratio: auto; border: 0; border-radius: 0; box-shadow: none; overflow: hidden; pointer-events: none; background: none; }
+.hero__illustration::before { content: "✽"; position: absolute; top: 12%; left: 14%; color: var(--butter-yellow); font-size: 3rem; text-shadow: none; }
+.hero__illustration::after { content: "✽"; position: absolute; right: 12%; bottom: 18%; color: var(--butter-yellow); font-size: 2.5rem; text-shadow: none; }
+.hero__flower { position: absolute; display: block; aspect-ratio: 1; border-radius: 50%; filter: drop-shadow(0 0.7rem 0.35rem rgba(102, 114, 59, 0.12)); opacity: 0.96; }
+.hero__flower--large { top: 9%; left: 9%; width: clamp(8rem, 17vw, 14rem); background: radial-gradient(circle at center, var(--butter-yellow) 0 17%, transparent 18%), conic-gradient(from -10deg, var(--burgundy) 0deg 24deg, transparent 24deg 48deg, var(--burgundy) 48deg 72deg, transparent 72deg 96deg, var(--burgundy) 96deg 120deg, transparent 120deg 144deg, var(--burgundy) 144deg 168deg, transparent 168deg 192deg, var(--burgundy) 192deg 216deg, transparent 216deg 240deg, var(--burgundy) 240deg 264deg, transparent 264deg 288deg, var(--burgundy) 288deg 312deg, transparent 312deg 336deg, var(--burgundy) 336deg 360deg); transform: rotate(-14deg); }
+.hero__flower--small { top: 18%; right: 10%; width: clamp(5rem, 11vw, 9rem); background: radial-gradient(circle at center, var(--butter-yellow) 0 17%, transparent 18%), conic-gradient(from 10deg, var(--dusty-pink) 0deg 24deg, transparent 24deg 48deg, var(--dusty-pink) 48deg 72deg, transparent 72deg 96deg, var(--dusty-pink) 96deg 120deg, transparent 120deg 144deg, var(--dusty-pink) 144deg 168deg, transparent 168deg 192deg, var(--dusty-pink) 192deg 216deg, transparent 216deg 240deg, var(--dusty-pink) 240deg 264deg, transparent 264deg 288deg, var(--dusty-pink) 288deg 312deg, transparent 312deg 336deg, var(--dusty-pink) 336deg 360deg); transform: rotate(18deg); }
+.hero__flower--tiny { right: 10%; bottom: 12%; width: 4.5rem; background: radial-gradient(circle at center, var(--butter-yellow) 0 18%, transparent 19%), conic-gradient(var(--plum) 0deg 30deg, transparent 30deg 60deg, var(--plum) 60deg 90deg, transparent 90deg 120deg, var(--plum) 120deg 150deg, transparent 150deg 180deg, var(--plum) 180deg 210deg, transparent 210deg 240deg, var(--plum) 240deg 270deg, transparent 270deg 300deg, var(--plum) 300deg 330deg, transparent 330deg 360deg); }
+.hero__leaf { position: absolute; display: block; width: clamp(6rem, 12vw, 11rem); height: clamp(2rem, 4vw, 4rem); border-radius: 100% 0 100% 0; background: var(--olive); opacity: 0.9; }
+.hero__leaf::after { content: ""; position: absolute; left: 15%; top: 50%; width: 72%; height: 1px; background: rgba(255, 248, 215, 0.72); transform: rotate(-22deg); transform-origin: left center; }
+.hero__leaf--one { left: 3%; bottom: 19%; transform: rotate(-34deg); }
+.hero__leaf--two { right: 1%; top: 40%; transform: rotate(42deg) scale(0.82); }
+
+.nav { border-color: rgba(137, 148, 79, 0.35); background: rgba(255, 248, 215, 0.76); backdrop-filter: blur(8px); }
+.nav__mark { border-color: var(--olive); color: var(--olive); background: rgba(193, 188, 82, 0.18); }
+.nav__links a { color: var(--olive); text-shadow: none; }
+.hero__ornament { color: var(--plum); text-shadow: none; }
+.hero .eyebrow { color: var(--burgundy); }
+
+h1 { max-width: none; color: var(--olive); font-family: "Caveat", cursive; font-size: clamp(4.75rem, 13vw, 9.5rem); font-weight: 600; line-height: 0.82; letter-spacing: -0.035em; text-shadow: none; }
+h1 em, footer em { color: var(--burgundy); }
+.hero__invitation { color: var(--burgundy); font-family: "Cormorant Garamond", serif; font-size: 1.5rem; }
+.date-lockup { color: var(--olive); }
+.date-lockup strong { border-color: rgba(137, 148, 79, 0.45); color: var(--burgundy); }
+.button { border-color: var(--olive); color: var(--warm-cream); background: var(--olive); box-shadow: 0 5px 0 rgba(102, 114, 59, 0.18), 0 14px 24px rgba(102, 114, 59, 0.14); }
+.button--light { border-color: var(--burgundy); color: var(--warm-cream); background: var(--burgundy); }
+.button:not(:disabled):hover, .button:not(:disabled):focus-visible { box-shadow: 0 7px 0 rgba(102, 114, 59, 0.18), 0 18px 28px rgba(102, 114, 59, 0.16); }
+.hero__scroll { background: rgba(137, 148, 79, 0.35); }
+.hero__scroll span { background: var(--olive); }
+
+h2, h3, blockquote, footer p { font-family: "Caveat", cursive; font-weight: 600; }
+h2 { color: var(--olive); font-size: clamp(3.6rem, 8vw, 6rem); text-shadow: none; }
+.section-heading > p:last-child, .detail-card p, .rsvp__card > p:not(.eyebrow), .rsvp__fallback { color: var(--ink); }
+.detail-grid { border-color: var(--line); border-radius: 1rem; background: rgba(255, 248, 215, 0.42); box-shadow: 0 16px 35px rgba(102, 114, 59, 0.08); }
+.detail-card { background: rgba(255, 248, 215, 0.42); }
+.detail-card:nth-child(2) { background: rgba(225, 150, 119, 0.12); }
+.detail-card:nth-child(3) { background: rgba(193, 188, 82, 0.12); }
+.detail-card__number { border-color: rgba(211, 110, 87, 0.52); color: var(--plum); background: rgba(225, 150, 119, 0.16); }
+.detail-card h3 { color: var(--olive); }
+.detail-card a, .rsvp__fallback a { color: var(--plum); }
+
+.story { color: var(--warm-cream); background: linear-gradient(135deg, var(--olive), var(--butter-yellow)); }
+.story__photo { background: linear-gradient(rgba(211, 110, 87, 0.16), rgba(211, 110, 87, 0.42)), radial-gradient(circle at 30% 25%, var(--dusty-pink), transparent 38%), linear-gradient(145deg, var(--olive), var(--plum)); }
+.story__copy > p:not(.eyebrow) { color: rgba(255, 248, 215, 0.9); }
+.story__copy .eyebrow, .story__copy h2, blockquote { color: var(--warm-cream); }
+blockquote { border-left-color: var(--plum); }
+
+.rsvp { background: var(--warm-cream); }
+.rsvp__card { border-color: rgba(211, 110, 87, 0.45); border-radius: 1rem; background: rgba(255, 248, 215, 0.76); box-shadow: 0 22px 55px rgba(102, 114, 59, 0.12); }
+.rsvp__card::before { border-color: rgba(193, 188, 82, 0.55); border-radius: 0.65rem; }
+.rsvp__card small { color: var(--olive); }
+.rsvp__form iframe { background: var(--warm-cream); }
+footer { border-top-color: var(--plum); color: var(--warm-cream); background: var(--olive); box-shadow: inset 0 1.5rem 2rem rgba(102, 114, 59, 0.16); }
+
+@media (max-width: 760px) {
+  .hero { min-height: 42rem; padding-top: 7rem; padding-bottom: 5rem; }
+  .hero__illustration { position: absolute; inset: 0; width: auto; height: auto; margin: 0; order: initial; }
+  .hero__copy { width: min(100%, 40rem); }
+  .hero__flower--large { top: 10%; left: -2rem; }
+  .hero__flower--small { top: 16%; right: -1.5rem; }
+  .hero__leaf--one { left: -2rem; bottom: 17%; }
+  .hero__leaf--two { right: -2rem; top: 43%; }
+  h1 { font-size: clamp(4.2rem, 20vw, 6.5rem); }
+}
