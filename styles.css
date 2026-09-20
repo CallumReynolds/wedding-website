@@ -364,3 +364,35 @@ h2 { font-size: clamp(3.4rem, 7vw, 5.8rem); line-height: 1; letter-spacing: 0; }
 @media (max-width: 760px) {
   h1 { font-size: clamp(3.5rem, 18vw, 6rem); }
 }
+
+
+/* Supplied invitation artwork */
+.hero::before, .hero::after { content: none; }
+.hero > .hero__ornament, .hero > .eyebrow, .hero > h1, .hero > .hero__invitation, .hero > .date-lockup, .hero > .button { position: relative; z-index: 2; }
+.floral-layer { position: absolute; pointer-events: none; z-index: 0; line-height: 0; }
+.floral-layer img, .section-floral, .footer-floral { display: block; width: 100%; height: auto; }
+.floral-layer--hero-left { top: -7rem; left: -7rem; width: 32rem; transform: rotate(-3deg); }
+.floral-layer--hero-right { top: -2rem; right: -7rem; width: 30rem; transform: rotate(3deg); }
+
+.details > .section-heading, .details > .detail-grid, .timeline > .section-heading, .timeline > .timeline__list, .rsvp > .rsvp__card { position: relative; z-index: 1; }
+.section-floral { position: absolute; z-index: 0; pointer-events: none; }
+.details-floral { right: -4rem; bottom: -3rem; width: 16rem; transform: rotate(-7deg); }
+.details-floral--small { left: 2%; top: 8rem; width: 5rem; transform: rotate(12deg); }
+.timeline-floral { right: -5rem; top: 5rem; width: 18rem; transform: rotate(5deg); }
+.timeline-floral--small { left: 2%; bottom: 4rem; width: 5rem; }
+.rsvp { overflow: hidden; }
+.rsvp-floral { right: -4rem; top: -2rem; width: 14rem; transform: rotate(8deg); }
+.rsvp-floral--small { left: 3%; bottom: 2rem; width: 5rem; transform: rotate(-10deg); }
+.footer-floral { position: absolute; right: -1rem; bottom: -1.5rem; z-index: 0; width: 9rem; opacity: 0.9; transform: rotate(8deg); pointer-events: none; }
+footer > p, footer > span { position: relative; z-index: 1; }
+@media (max-width: 760px) {
+  .floral-layer--hero-left { top: -3rem; left: -5rem; width: 19rem; }
+  .floral-layer--hero-right { top: 0; right: -5rem; width: 18rem; }
+  .details-floral { right: -4rem; bottom: -2rem; width: 11rem; }
+  .details-floral--small { left: -1rem; top: 7rem; width: 3.5rem; }
+  .timeline-floral { right: -4rem; top: 4rem; width: 12rem; }
+  .timeline-floral--small { left: -1rem; bottom: 3rem; width: 3.5rem; }
+  .rsvp-floral { right: -3rem; top: -1rem; width: 10rem; }
+  .rsvp-floral--small { left: -1rem; bottom: 1rem; width: 3.5rem; }
+  .footer-floral { width: 6rem; }
+}
