@@ -313,3 +313,54 @@ footer { border-top-color: var(--plum); color: var(--warm-cream); background: va
   .hero__leaf--two { right: -2rem; top: 43%; }
   h1 { font-size: clamp(4.2rem, 20vw, 6.5rem); }
 }
+
+
+/* Day timeline and clean floral navigation */
+.nav { border: 0; background: transparent; padding: 0; backdrop-filter: none; }
+.nav__mark { box-shadow: 0 0 0 0.25rem rgba(255, 248, 215, 0.72); }
+
+.timeline { background: var(--warm-cream); }
+.timeline__list { max-width: 58rem; margin: 0 auto; position: relative; }
+.timeline__list::before { content: ""; position: absolute; top: 0.75rem; bottom: 0.75rem; left: 11rem; width: 2px; background: linear-gradient(var(--butter-yellow), var(--dusty-pink), var(--butter-yellow)); }
+.timeline__item { display: grid; grid-template-columns: 10rem 2rem minmax(0, 1fr); gap: 1rem; align-items: start; position: relative; padding-bottom: 2.5rem; }
+.timeline__item:last-child { padding-bottom: 0; }
+.timeline__time { padding-top: 0.5rem; color: var(--plum); font: 600 1.15rem "Caveat", cursive; line-height: 1.1; text-align: right; }
+.timeline__marker { width: 2rem; height: 2rem; display: grid; place-items: center; border: 2px solid var(--olive); border-radius: 50%; color: var(--warm-cream); background: var(--olive); font-size: 0.62rem; font-weight: 600; line-height: 1; position: relative; z-index: 1; }
+.timeline__content { padding: 1.35rem 1.6rem; border: 1px solid rgba(137, 148, 79, 0.26); border-radius: 0.75rem; background: rgba(255, 248, 215, 0.72); box-shadow: 0 12px 24px rgba(102, 114, 59, 0.07); }
+.timeline__content h3 { margin: 0 0 0.35rem; color: var(--olive); font-size: 2rem; line-height: 1; }
+.timeline__content p { margin: 0; color: var(--ink); font-size: 0.9rem; }
+@media (max-width: 760px) {
+  .nav { inset-inline: 1.25rem; }
+  .nav__mark { box-shadow: 0 0 0 0.2rem rgba(255, 248, 215, 0.78); }
+  .timeline__list { padding-left: 0.25rem; }
+  .timeline__list::before { left: 1.25rem; }
+  .timeline__item { grid-template-columns: 2.5rem minmax(0, 1fr); gap: 0.75rem; padding-bottom: 1.75rem; }
+  .timeline__time { grid-column: 2; grid-row: 1; padding-top: 0; text-align: left; }
+  .timeline__marker { grid-column: 1; grid-row: 1 / span 2; }
+  .timeline__content { grid-column: 2; grid-row: 2; padding: 1.1rem 1.25rem; }
+}
+
+
+@font-face {
+  font-family: "American Uncial";
+  src: url("./fonts/American-Uncial-Normal-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Requested type pairing */
+:root {
+  --display-font: "American Uncial", "Uncial Antiqua", "Cormorant Garamond", serif;
+  --handwritten-font: "Beth Ellen", cursive;
+}
+
+h1, h2, h3, blockquote, footer p { font-family: var(--display-font); font-weight: 400; }
+h1 { font-size: clamp(4rem, 11vw, 8.5rem); line-height: 0.9; letter-spacing: 0; }
+h2 { font-size: clamp(3.4rem, 7vw, 5.8rem); line-height: 1; letter-spacing: 0; }
+.hero__invitation, .timeline__time { font-family: var(--handwritten-font); font-style: normal; }
+.hero__invitation { font-size: 1.45rem; }
+.eyebrow { font-family: var(--handwritten-font); font-size: 0.95rem; font-weight: 400; letter-spacing: 0.03em; text-transform: none; }
+@media (max-width: 760px) {
+  h1 { font-size: clamp(3.5rem, 18vw, 6rem); }
+}
