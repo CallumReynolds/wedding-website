@@ -14,7 +14,7 @@ window.WEDDING_CONFIG = {
   story:
     "Our story is still being written. Add a few words here about how you met, the adventures you have shared and the moment you knew.",
   rsvpMessage:
-    "Invitations and RSVP details will be shared soon. Please save the date.",
+    "Please save the date.",
   rsvpDeadline: "Saturday, 21 July 2027",
   // In Google Forms, choose Send → Link, then paste the public form URL here.
   googleFormUrl: "https://forms.gle/vrKdZywjqi8N3XYS6",
